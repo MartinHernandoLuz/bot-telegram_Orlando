@@ -39,7 +39,7 @@ jobs:
 
     - name: Authenticate ngrok
       run: |
-        echo ${{ secrets.NGROK_TOKEN }} | ngrok config add-authtoken
+        ngrok config add-authtoken ${{ secrets.NGROK_TOKEN }}
 
   deploy:
     runs-on: ubuntu-latest
