@@ -45,8 +45,8 @@ jobs:
       env:
         TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
         NGROK_TOKEN: ${{ secrets.NGROK_TOKEN }}
-        NGROK_URL: ${{ secret.NGROK_URL }}
-        PORT: ${{ secret.PORT }}
+        NGROK_URL: ${{ secrets.NGROK_URL }}
+        PORT: ${{ secrets.PORT }}
       run: |
         python3 -m venv .venv
         source .venv/bin/activate
