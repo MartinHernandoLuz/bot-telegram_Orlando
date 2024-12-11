@@ -1,5 +1,7 @@
 from flask_env import MetaFlaskEnv
 import os
+from dotenv import load_dotenv
+load_dotenv()
 
 class Configuration(metaclass=MetaFlaskEnv):
     TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
