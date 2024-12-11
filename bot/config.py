@@ -8,3 +8,11 @@ class Configuration(metaclass=MetaFlaskEnv):
     PORT = int(os.getenv("PORT", 5000))
     DEBUG = os.getenv("DEBUG", "false").lower() == "true"
     WEBHOOK = f"{NGROK_URL}/webhook"
+
+    # Imprime las variables de entorno para verificar si están cargadas correctamente
+    print("TELEGRAM_TOKEN:", TELEGRAM_TOKEN)
+    print("NGROK_TOKEN:", NGROK_TOKEN)
+    print("NGROK_URL:", NGROK_URL)
+    print("PORT:", PORT)
+    print("DEBUG:", DEBUG)
+    print("WEBHOOK:", WEBHOOK)
