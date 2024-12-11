@@ -14,7 +14,6 @@ bot = telebot.TeleBot(Configuration.TELEGRAM_TOKEN)
 def index():
     return {
         "status": "Bot está corriendo",
-        "webhook_url": Configuration.WEBHOOK_URL,
         "environment": os.getenv("FLASK_ENV", "production"),
     }
 
